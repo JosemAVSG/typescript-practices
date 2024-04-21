@@ -4,7 +4,7 @@ const b: number = 2
 const sumar = (a: number, b: number) : number => a + b
 
 console.log(sumar(a, b));
-
+// ------------------------------------------------------------------------------------------
 interface AudioBooks {
     name:string,
     duration:number,
@@ -56,4 +56,32 @@ const myPlaylist: PlayList = {
                 name: "Author 3"}
         }
     ])
+}
+
+// ------------------------------------------------------------------------------------------
+
+interface Iuser{
+    name: string,
+    age: number
+}
+
+interface Iadmin extends Iuser{
+    adminGot: Date,
+    role: string
+}
+
+interface Iguest extends Iuser{
+    role: string
+}
+
+const user: Iuser = {
+    name: "John",
+    age: 30
+}
+
+const admin: Iadmin = {
+    name: "John",
+    age: 30,
+    role: "admin",
+    adminGot: new Date(),   
 }
